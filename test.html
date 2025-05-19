@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfica con Highcharts</title>
+    <!-- Cargar Highcharts desde CDN -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+
+<!-- Contenedor para la gráfica -->
+<div id="miGrafica" style="width: 80%; height: 400px; margin: auto;"></div>
+
+<script>
+    Highcharts.chart('miGrafica', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Ejemplo de Gráfica con Highcharts'
+        },
+        subtitle: {
+            text: 'Fuente: Datos ficticios'
+        },
+        xAxis: {
+            categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun']
+        },
+        yAxis: {
+            title: {
+                text: 'Valor'
+            }
+        },
+        series: [{
+            name: 'Serie A',
+            data: [29, 71, 106, 129, 144, 176]
+        }, {
+            name: 'Serie B',
+            data: [83, 78, 98, 93, 106, 84]
+        }]
+    });
+</script>
+
+</body>
+</html>
